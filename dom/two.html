@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai Aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent')
+    // console.log(parent); // parent 
+    // console.log(parent.children); // HTMLCollection(4) [div.day, div.day, div.day, div.day]
+    // console.log(parent.children[1].innerHTML); // accessing first element of children and print its innerHTML
+
+    // for (let i = 0; i < parent.children.length; i++) { // loop through children
+    //     console.log(parent.children[i].innerHTML); 
+    // }
+    parent.children[1].style.color = "orange" // accessing first element of children and change its color to orange
+    console.log(parent.firstElementChild); // parent to first child
+    console.log(parent.lastElementChild); // parent to last child
+
+    const dayone = document.querySelector('.day')
+    console.log(dayone); // dayone
+    console.log(dayone.parentElement); // track parent element of dayone
+    console.log(dayone.nextElementSibling); // next sibling
+    
+    console.log("NODES: ",parent.childNodes); // childNodes returns all child nodes including text nodes // NodeList(11) [text, comment, text, div.day, text, div.day, text, div.day, text, div.day
+
+</script>
+</html>
